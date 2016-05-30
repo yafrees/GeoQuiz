@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GeoQuiz</string>
+    <string name="true_button">TRUE</string>
+    <string name="false_button">fALSE</string>
+
+    <string name="correct_toast">Correct!</string>
+    <string name="incorrect_toast">Incorrect!</string>
+
+
+    <string name="question_test">Constantinople is the largest city in Turkey ?</string>
+</resources>
