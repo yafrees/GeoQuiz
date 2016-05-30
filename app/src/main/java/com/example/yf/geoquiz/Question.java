@@ -13,19 +13,19 @@ public class Question {
         mAnswerTrue = answerTrue;
     }
 
-    public boolean ismAnswerTrue() {
-        return mAnswerTrue;
-    }
-
-    public void setmAnswerTrue(boolean mAnswerTrue) {
-        this.mAnswerTrue = mAnswerTrue;
-    }
-
-    public int getmTextResID() {
+    public int getTextResID() {
         return mTextResID;
     }
 
-    public void setmTextResID(int mTextResID) {
-        this.mTextResID = mTextResID;
+    public void setTextResID(int textResID) {
+        mTextResID = textResID;
+    }
+
+    public boolean isAnswerTrue() {
+        return mAnswerTrue;
+    }
+
+    public void setAnswerTrue(boolean answerTrue) {
+        mAnswerTrue = answerTrue;
     }
 }
