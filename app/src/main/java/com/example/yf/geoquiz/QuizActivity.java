@@ -59,14 +59,7 @@ public class QuizActivity extends AppCompatActivity {
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mCurrentIndex == 4){
-                    Toast.makeText(QuizActivity.this , "这是最后一题！" , Toast.LENGTH_LONG).show();
-                }
-                else{
-                    mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
-                    updateQuestion();
-                }
-
+                nextQuiz();
             }
         });
 
@@ -74,7 +67,6 @@ public class QuizActivity extends AppCompatActivity {
         mPrevButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (mCurrentIndex == 0){
                     Toast.makeText(QuizActivity.this , "这是第一题！" , Toast.LENGTH_LONG).show();
                 }
@@ -89,19 +81,24 @@ public class QuizActivity extends AppCompatActivity {
 
     //自定义监听事件。实现点击文字跳转到下一题。
     public  void nextQuiz(View view){
-        if (mCurrentIndex == 4){
-            Toast.makeText(QuizActivity.this , "这是最后一题！" , Toast.LENGTH_LONG).show();
-        }
-        else{
-            mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
-            updateQuestion();
-        }
+        nextQuiz();
     }
 
     //对公共方法进行抽取，以方便共用。
     private void updateQuestion(){
         int question = mQuestionBank[mCurrentIndex].getTextResID();
         mQuestionTextView.setText(question);
+    }
+
+    //抽取。关于下一题的点击事件（包括点击按钮和点击文字）
+    private void nextQuiz(){
+        if (mCurrentIndex == mQuestionBank.length - 1){
+            Toast.makeText(QuizActivity.this , "这是最后一题！" , Toast.LENGTH_LONG).show();
+        }
+        else{
+            mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+            updateQuestion();
+        }
     }
 
     //增加答题TURE或者FALSE的逻辑判断。
