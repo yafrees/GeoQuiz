@@ -79,7 +79,7 @@ public class QuizActivity extends AppCompatActivity {
         });
     }
 
-    //自定义监听事件。实现点击文字跳转到下一题。
+    //自定义监听事件。实现点击文字（题目）跳转到下一题。
     public  void nextQuiz(View view){
         nextQuiz();
     }
