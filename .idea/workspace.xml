@@ -55,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yf/geoquiz/QuizActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.4080925">
-              <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+              <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#501#525#0" expanded="true" />
@@ -63,13 +63,14 @@
                 <element signature="e#620#644#0" expanded="true" />
                 <element signature="e#678#704#0" expanded="true" />
                 <element signature="e#739#761#0" expanded="true" />
-                <element signature="e#1304#1523#0" expanded="true" />
-                <element signature="e#1448#1470#0" expanded="true" />
-                <element signature="e#1522#1523#0" expanded="true" />
-                <element signature="e#1631#1851#0" expanded="true" />
-                <element signature="e#1774#1798#0" expanded="true" />
-                <element signature="e#1850#1851#0" expanded="true" />
-                <element signature="e#1957#2183#0" expanded="true" />
+                <element signature="e#1304#1560#0" expanded="true" />
+                <element signature="e#1559#1560#0" expanded="true" />
+                <element signature="e#1668#1926#0" expanded="true" />
+                <element signature="e#1925#1926#0" expanded="true" />
+                <element signature="e#2032#2258#0" expanded="true" />
+                <element signature="e#2257#2258#0" expanded="true" />
+                <element signature="e#2710#2732#0" expanded="true" />
+                <element signature="e#2785#2809#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,10 +80,11 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yf/geoquiz/Question.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
               <folding>
                 <element signature="e#319#320#0" expanded="true" />
                 <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#508#509#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2197,13 +2199,14 @@
             <element signature="e#620#644#0" expanded="true" />
             <element signature="e#678#704#0" expanded="true" />
             <element signature="e#739#761#0" expanded="true" />
-            <element signature="e#1304#1523#0" expanded="true" />
-            <element signature="e#1448#1470#0" expanded="true" />
-            <element signature="e#1522#1523#0" expanded="true" />
-            <element signature="e#1631#1851#0" expanded="true" />
-            <element signature="e#1774#1798#0" expanded="true" />
-            <element signature="e#1850#1851#0" expanded="true" />
-            <element signature="e#1957#2183#0" expanded="true" />
+            <element signature="e#1304#1560#0" expanded="true" />
+            <element signature="e#1559#1560#0" expanded="true" />
+            <element signature="e#1668#1926#0" expanded="true" />
+            <element signature="e#1925#1926#0" expanded="true" />
+            <element signature="e#2032#2258#0" expanded="true" />
+            <element signature="e#2257#2258#0" expanded="true" />
+            <element signature="e#2710#2732#0" expanded="true" />
+            <element signature="e#2785#2809#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2215,6 +2218,7 @@
           <folding>
             <element signature="e#319#320#0" expanded="true" />
             <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2251,13 +2255,14 @@
             <element signature="e#620#644#0" expanded="true" />
             <element signature="e#678#704#0" expanded="true" />
             <element signature="e#739#761#0" expanded="true" />
-            <element signature="e#1304#1523#0" expanded="true" />
-            <element signature="e#1448#1470#0" expanded="true" />
-            <element signature="e#1522#1523#0" expanded="true" />
-            <element signature="e#1631#1851#0" expanded="true" />
-            <element signature="e#1774#1798#0" expanded="true" />
-            <element signature="e#1850#1851#0" expanded="true" />
-            <element signature="e#1957#2183#0" expanded="true" />
+            <element signature="e#1304#1560#0" expanded="true" />
+            <element signature="e#1559#1560#0" expanded="true" />
+            <element signature="e#1668#1926#0" expanded="true" />
+            <element signature="e#1925#1926#0" expanded="true" />
+            <element signature="e#2032#2258#0" expanded="true" />
+            <element signature="e#2257#2258#0" expanded="true" />
+            <element signature="e#2710#2732#0" expanded="true" />
+            <element signature="e#2785#2809#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2269,6 +2274,7 @@
           <folding>
             <element signature="e#319#320#0" expanded="true" />
             <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2323,17 +2329,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yf/geoquiz/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.7428572">
@@ -2342,10 +2337,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yf/geoquiz/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding>
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yf/geoquiz/QuizActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4080925">
-          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+          <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#501#525#0" expanded="true" />
@@ -2353,13 +2360,14 @@
             <element signature="e#620#644#0" expanded="true" />
             <element signature="e#678#704#0" expanded="true" />
             <element signature="e#739#761#0" expanded="true" />
-            <element signature="e#1304#1523#0" expanded="true" />
-            <element signature="e#1448#1470#0" expanded="true" />
-            <element signature="e#1522#1523#0" expanded="true" />
-            <element signature="e#1631#1851#0" expanded="true" />
-            <element signature="e#1774#1798#0" expanded="true" />
-            <element signature="e#1850#1851#0" expanded="true" />
-            <element signature="e#1957#2183#0" expanded="true" />
+            <element signature="e#1304#1560#0" expanded="true" />
+            <element signature="e#1559#1560#0" expanded="true" />
+            <element signature="e#1668#1926#0" expanded="true" />
+            <element signature="e#1925#1926#0" expanded="true" />
+            <element signature="e#2032#2258#0" expanded="true" />
+            <element signature="e#2257#2258#0" expanded="true" />
+            <element signature="e#2710#2732#0" expanded="true" />
+            <element signature="e#2785#2809#0" expanded="true" />
           </folding>
         </state>
       </provider>
