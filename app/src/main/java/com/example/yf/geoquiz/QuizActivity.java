@@ -11,10 +11,13 @@ public class QuizActivity extends AppCompatActivity {
 
     private Button mTrueButton;
     private Button mFalseButton;
+
     private Button mNextButton;
+    private Button mPrevButton;
 
     private TextView mQuestionTextView;
 
+    //题库
     private Question [] mQuestionBank = new Question[]{
             new Question(R.string.question_oceans , true),
             new Question(R.string.question_mideast , true),
@@ -56,10 +59,43 @@ public class QuizActivity extends AppCompatActivity {
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
-                updateQuestion();
+                if (mCurrentIndex == 4){
+                    Toast.makeText(QuizActivity.this , "这是最后一题！" , Toast.LENGTH_LONG).show();
+                }
+                else{
+                    mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+                    updateQuestion();
+                }
+
             }
         });
+
+        mPrevButton = (Button) findViewById(R.id.prev_button);
+        mPrevButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (mCurrentIndex == 0){
+                    Toast.makeText(QuizActivity.this , "这是第一题！" , Toast.LENGTH_LONG).show();
+                }
+                else {
+                    mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
+                    updateQuestion();
+                }
+
+            }
+        });
+    }
+
+    //自定义监听事件。实现点击文字跳转到下一题。
+    public  void nextQuiz(View view){
+        if (mCurrentIndex == 4){
+            Toast.makeText(QuizActivity.this , "这是最后一题！" , Toast.LENGTH_LONG).show();
+        }
+        else{
+            mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+            updateQuestion();
+        }
     }
 
     //对公共方法进行抽取，以方便共用。
