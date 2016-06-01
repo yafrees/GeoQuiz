@@ -1,13 +1,16 @@
 package com.example.yf.geoquiz;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class QuizActivity extends AppCompatActivity {
+
+    private static final String TAG = "QuizActivity";
 
     private Button mTrueButton;
     private Button mFalseButton;
@@ -23,7 +26,7 @@ public class QuizActivity extends AppCompatActivity {
             new Question(R.string.question_mideast , true),
             new Question(R.string.question_africa, true),
             new Question(R.string.question_americas , true),
-            new Question(R.string.question_aisa , true),
+            new Question(R.string.question_aisa , true)
     };
 
     private int mCurrentIndex = 0;
@@ -31,11 +34,12 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "Oncreat(Bundle) called");
         setContentView(R.layout.activity_quiz);
 
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
         updateQuestion();
-//        int question = mQuestionBank[mCurrentIndex].getTextResID();x
+//        int question = mQuestionBank[mCurrentIndex].getTextResID();
 //        mQuestionTextView.setText(question);
 
         mTrueButton = (Button) findViewById(R.id.true_button);
@@ -46,6 +50,7 @@ public class QuizActivity extends AppCompatActivity {
 //                Toast.makeText(QuizActivity.this , R.string.correct_toast , Toast.LENGTH_LONG).show();
             }
         });
+
         mFalseButton = (Button) findViewById(R.id.false_button);
         mFalseButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,5 +120,35 @@ public class QuizActivity extends AppCompatActivity {
         }
         Toast.makeText(this , messageResId , Toast.LENGTH_LONG).show();
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG , "onStart() called");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG , "onPause() called");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG , "onResume() called");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG , "onStop() called");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG , "onDestroy() called");
     }
 }
