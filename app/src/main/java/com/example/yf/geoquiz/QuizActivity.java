@@ -68,20 +68,20 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
-        mPrevButton = (Button) findViewById(R.id.prev_button);
-        mPrevButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mCurrentIndex == 0){
-                    Toast.makeText(QuizActivity.this , "这是第一题！" , Toast.LENGTH_LONG).show();
-                }
-                else {
-                    mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
-                    updateQuestion();
-                }
-
-            }
-        });
+//        mPrevButton = (Button) findViewById(R.id.prev_button);
+//        mPrevButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (mCurrentIndex == 0){
+//                    Toast.makeText(QuizActivity.this , "这是第一题！" , Toast.LENGTH_LONG).show();
+//                }
+//                else {
+//                    mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
+//                    updateQuestion();
+//                }
+//
+//            }
+//        });
     }
 
     //自定义监听事件。实现点击文字（题目）跳转到下一题。
