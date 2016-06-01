@@ -12,6 +12,10 @@ public class QuizActivity extends AppCompatActivity {
 
     private static final String TAG = "QuizActivity";
 
+    //用来保存当前mCurrentIndex的值，
+    //修正因为设备旋转造成的Activity销毁带来的题目回到初始
+    private static final String KEY_INDEX = "index";
+
     private Button mTrueButton;
     private Button mFalseButton;
 
@@ -37,8 +41,10 @@ public class QuizActivity extends AppCompatActivity {
         Log.d(TAG, "Oncreat(Bundle) called");
         setContentView(R.layout.activity_quiz);
 
-        mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
+      mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
         updateQuestion();
+
+
 //        int question = mQuestionBank[mCurrentIndex].getTextResID();
 //        mQuestionTextView.setText(question);
 
@@ -65,6 +71,7 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 nextQuiz();
+                updateQuestion();
             }
         });
 
@@ -79,13 +86,26 @@ public class QuizActivity extends AppCompatActivity {
                     mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
                     updateQuestion();
                 }
-
             }
         });
+
+        //检查存储的bundle信息
+        if (savedInstanceState != null){
+            mCurrentIndex = savedInstanceState.getInt(KEY_INDEX , 0);
+        }
+        updateQuestion();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle saveInstanceState) {
+        super.onSaveInstanceState(saveInstanceState);
+        Log.i(TAG , "saveInstanceState");
+        saveInstanceState.putInt(KEY_INDEX , mCurrentIndex);
+
     }
 
     //自定义监听事件。实现点击文字（题目）跳转到下一题。
-    public  void nextQuiz(View view){
+    public  void nextQ(View view){
         nextQuiz();
     }
 
