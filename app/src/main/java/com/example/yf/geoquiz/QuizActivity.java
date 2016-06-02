@@ -41,19 +41,15 @@ public class QuizActivity extends AppCompatActivity {
         Log.d(TAG, "Oncreat(Bundle) called");
         setContentView(R.layout.activity_quiz);
 
-      mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
+        mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
         updateQuestion();
 
-
-//        int question = mQuestionBank[mCurrentIndex].getTextResID();
-//        mQuestionTextView.setText(question);
 
         mTrueButton = (Button) findViewById(R.id.true_button);
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 checkAnswer(true);
-//                Toast.makeText(QuizActivity.this , R.string.correct_toast , Toast.LENGTH_LONG).show();
             }
         });
 
@@ -62,7 +58,6 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 checkAnswer(false);
-//                Toast.makeText(QuizActivity.this, R.string.incorrect_toast, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -74,6 +69,8 @@ public class QuizActivity extends AppCompatActivity {
                 updateQuestion();
             }
         });
+
+        updateQuestion();
 
         mPrevButton = (Button) findViewById(R.id.prev_button);
         mPrevButton.setOnClickListener(new View.OnClickListener() {
@@ -93,7 +90,8 @@ public class QuizActivity extends AppCompatActivity {
         if (savedInstanceState != null){
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX , 0);
         }
-        updateQuestion();
+//        updateQuestion();
+
     }
 
     @Override
@@ -121,6 +119,7 @@ public class QuizActivity extends AppCompatActivity {
             Toast.makeText(QuizActivity.this , "这是最后一题！" , Toast.LENGTH_LONG).show();
         }
         else{
+            //debug测试
             mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
             updateQuestion();
         }
@@ -129,9 +128,7 @@ public class QuizActivity extends AppCompatActivity {
     //增加答题TURE或者FALSE的逻辑判断。
     private void checkAnswer(boolean userPressedTrue){
         boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
-
         int messageResId = 0;
-
         if (userPressedTrue == answerIsTrue){
             messageResId = R.string.correct_toast;
         }
